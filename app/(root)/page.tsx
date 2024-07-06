@@ -1,9 +1,11 @@
+import { UserButton } from "@clerk/nextjs";
 import React from "react";
 
 const Home = () => {
   return (
     <div>
-      <h1 className="text-white-1">Podcast</h1>
+      Home
+      <UserButton />
     </div>
   );
 };
