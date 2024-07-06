@@ -1,7 +1,7 @@
 import React from "react";
 
-const CteatePodcast = () => {
-  return <div>CteatePodcast</div>;
+const CreatePodcast = () => {
+  return <div>CreatePodcast</div>;
 };
 
-export default CteatePodcast;
+export default CreatePodcast;
