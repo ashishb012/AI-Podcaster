@@ -11,13 +11,14 @@ import { cn } from "@/lib/utils";
 import { SignedIn, SignedOut, useClerk } from "@clerk/nextjs";
 import Image from "next/image";
 import Link from "next/link";
-import { usePathname } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 import { Button } from "./ui/button";
 import router from "next/router";
 
 const MobileNav = () => {
   const pathname = usePathname();
   const { signOut } = useClerk();
+  const router = useRouter();
 
   return (
     <section>
