@@ -1,3 +1,6 @@
+// Replace the domain with your own clerk domain
+// Clerk -> API keys -> Show API URL -> Frontend API URL
+
 const authConfig = {
   providers: [
     {
