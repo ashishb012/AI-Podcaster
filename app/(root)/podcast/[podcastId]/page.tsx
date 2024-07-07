@@ -43,11 +43,18 @@ const PodcastDetails = ({
         </figure>
       </header>
 
-      {/* <PodcastDetailPlayer
+      <PodcastDetailPlayer
+        audioUrl={podcast.audioUrl!}
+        podcastTitle={podcast?.podcastTitle}
+        author={podcast?.author}
         isOwner={isOwner}
+        imageUrl={podcast?.imageUrl!}
         podcastId={podcast._id}
-        {...podcast}
-      /> */}
+        imageStorageId={podcast?.imageStorageId!}
+        audioStorageId={podcast?.audioStorageId!}
+        authorImageUrl={podcast?.authorImageUrl!}
+        authorId={podcast?.authorId!}
+      />
 
       <p className="text-white-2 text-16 pb-8 pt-[45px] font-medium max-md:text-center">
         {podcast?.podcastDescription}
