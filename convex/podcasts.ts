@@ -93,10 +93,17 @@ export const getAllPodcasts = query({
 // this query will get the podcast by the podcastId.
 export const getPodcastById = query({
   args: {
-    podcastId: v.id("podcasts"),
+    podcastId: v.string(),
   },
   handler: async (ctx, args) => {
-    return await ctx.db.get(args.podcastId);
+    const podcast = await ctx.db
+      .query("podcasts")
+      .filter((q) => q.eq(q.field("_id"), args.podcastId))
+      .unique();
+    if (!podcast) {
+      throw new ConvexError("Podcast not found");
+    }
+    return podcast;
   },
 });
 

@@ -58,6 +58,7 @@ export interface GeneratePodcastProps {
   voicePrompt: string;
   setVoicePrompt: Dispatch<SetStateAction<string>>;
   setAudioDuration: Dispatch<SetStateAction<number>>;
+  // isAiPodcast: boolean;
 }
 
 export interface GenerateThumbnailProps {
