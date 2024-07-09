@@ -13,7 +13,6 @@ import Image from "next/image";
 import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
 import { Button } from "./ui/button";
-import router from "next/router";
 
 const MobileNav = () => {
   const pathname = usePathname();
